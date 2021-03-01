@@ -1,0 +1,16 @@
+package ec.edu.ec.doctoradoEjb.entidad;
+
+import java.util.List;
+
+import ec.edu.uce.doctoradoJpa.entidad.Persona;
+
+public class PersonaServicioImpl implements PersonaServicio{
+
+	@Override
+	public List<Persona> listar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

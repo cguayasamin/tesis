@@ -1,0 +1,24 @@
+<h:head xmlns:h="http://java.sun.com/jsf/html">
+<ui:include src="/componentesGenerales/plantillas/pltHead.xhtml" />
+</h:head>
+<h:body class="dtic" >
+ <div id="cabecera">
+<ui:include src="/componentesGenerales/plantillas/pltCabecera.xhtml" />
+ </div>
+ <div id="wrapper" class="wrapper" >
+<div id="menu">
+ <ui:include src="/componentesGenerales/plantillas/pltMenu.xhtml" />
+<ui:insert name="paginacion"></ui:insert>
+</div>
+<div id="mensajeGlobal">
+ <p:messages autoUpdate="true" globalOnly="true" />
+</div>
+<div id="contenido">
+<ui:include
+src="/componentesGenerales/plantillas/dialogos/dialogoTrabajando.xhtml" />
+ <ui:insert name="cuerpo"></ui:insert>
+</div>
+<div id="pie">
+<ui:include src="/componentesGenerales/plantillas/pltPie.xhtml" />
+ </div>
+</h:body>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>DoctoradoJsf</display-name>
+  <welcome-file-list>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<!-- ============================================================================= -->
+<!-- ========================== CONFIGURACIONES PRIMEFACES ======================= -->
+<!-- ============================================================================= -->
+ <!-- Definicion del parametro de contexto de primefaces y del theme a usar -->
+  <context-param>
+ <param-name>primefaces.THEME</param-name>
+ <param-value>dtictheme</param-value>
+ </context-param>
+  
+  <context-param>
+  	<param-name>javax.faces.PROJECT_STAGE</param-name>
+  	<param-value>Production</param-value>
+  </context-param>
+  
+  <!-- Definicion del filtro para el FileUpload de primefaces -->
+  <filter>
+ 	<filter-name>PrimeFaces FileUpload Filter</filter-name>
+ 	<filter-class> org.primefaces.webapp.filter.FileUploadFilter </filter-class>
+ 	<init-param>
+ 		<param-name>thresholdSize</param-name>
+ 		<param-value>1</param-value>
+ 	</init-param>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>PrimeFaces FileUpload Filter</filter-name>
+ 	<servlet-name>Faces Servlet</servlet-name>
+ </filter-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+</web-app>

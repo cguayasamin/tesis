@@ -1,0 +1,24 @@
+package ec.edu.ec.doctorado.ejb.entidad;
+
+import java.util.List;
+
+import ec.edu.uce.doctorado.jpa.entidad.Persona;
+
+public class prueb {
+
+	public prueb() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		PersonaServicio personaSe = null;
+		List<Persona> listar=personaSe.listar();
+		for (Persona persona : listar) {
+			System.out.print(persona.getPrsNombres());
+		}
+		
+	}
+
+}

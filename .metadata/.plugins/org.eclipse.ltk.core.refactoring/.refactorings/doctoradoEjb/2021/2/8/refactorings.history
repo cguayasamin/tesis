@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ec.edu.ec.doctoradoEjb.entidad&apos; to &apos;ec.edu.ec.doctorado.ejb.entidad&apos;&#x0D;&#x0A;- Original project: &apos;doctoradoEjb&apos;&#x0D;&#x0A;- Original element: &apos;doctoradoEjb/ejbModule/ec.edu.ec.doctoradoEjb.entidad&apos;&#x0D;&#x0A;- Renamed element: &apos;doctoradoEjb/ejbModule/ec.edu.ec.doctorado.ejb.entidad&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ec.edu.ec.doctoradoEjb.entidad&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/ejbModule&lt;ec.edu.ec.doctoradoEjb.entidad" name="ec.edu.ec.doctorado.ejb.entidad" qualified="false" references="true" stamp="1614298000881" textual="false" version="1.0"/>
+</session>

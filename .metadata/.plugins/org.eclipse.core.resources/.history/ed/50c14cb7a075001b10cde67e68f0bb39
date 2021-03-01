@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="doctoradoEar">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="doctoradoJsf.war" deploy-path="/" handle="module:/resource/doctoradoJsf/doctoradoJsf">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="doctoradoJpa.jar" deploy-path="/lib" handle="module:/resource/doctoradoJpa/doctoradoJpa">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="doctoradoEjb.jar" deploy-path="/" handle="module:/resource/doctoradoEjb/doctoradoEjb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.1.4.RELEASE.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/springSecurity/spring-expression-4.1.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-jpa-2.1-api-1.0.0.Final.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/hibernate-jpa-2.1-api-1.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-core-4.3.11.Final.jar" deploy-path="/" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/hibernate-core-4.3.11.Final.jar">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-digester-2.1.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/jasperReport/commons-digester-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logging-annotations-1.2.0.Beta1.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/jboss-logging-annotations-1.2.0.Beta1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/jasperReport/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-1.9.0.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/jasperReport/commons-beanutils-1.9.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-security-core-3.2.5.RELEASE.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/springSecurity/spring-security-core-3.2.5.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dom4j-1.6.1-2.0.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/dom4j-1.6.1-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-commons-annotations-4.0.5.Final.jar" deploy-path="/" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/hibernate-commons-annotations-4.0.5.Final.jar">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-security-web-3.2.5.RELEASE.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/springSecurity/spring-security-web-3.2.5.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jasperreports-6.0.0.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/jasperReport/jasperreports-6.0.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-transaction-api_1.2_spec-1.0.0.Final.jar" deploy-path="/lib" handle="module:/classpath/lib/doctoradoEar/librerias/hibernate/jboss-transaction-api_1.2_spec-1.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

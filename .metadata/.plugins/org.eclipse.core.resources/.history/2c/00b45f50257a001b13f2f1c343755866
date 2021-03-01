@@ -1,0 +1,25 @@
+package ec.edu.uce.doctorado.jpa.entidad;
+
+import java.sql.Timestamp;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2021-02-28T16:01:35.687-0500")
+@StaticMetamodel(Usuario.class)
+public class Usuario_ {
+	public static volatile SingularAttribute<Usuario, Integer> usrId;
+	public static volatile SingularAttribute<Usuario, Integer> usrActiveDirectory;
+	public static volatile SingularAttribute<Usuario, Integer> usrEstado;
+	public static volatile SingularAttribute<Usuario, Integer> usrEstSesion;
+	public static volatile SingularAttribute<Usuario, Date> usrFechaCreacion;
+	public static volatile SingularAttribute<Usuario, Date> usrFechaCaducidad;
+	public static volatile SingularAttribute<Usuario, Timestamp> usrTiempoSesion;
+	public static volatile SingularAttribute<Usuario, String> usrIdentificacion;
+	public static volatile SingularAttribute<Usuario, String> usrNick;
+	public static volatile SingularAttribute<Usuario, String> usrPassword;
+	public static volatile SingularAttribute<Usuario, Persona> usrPersona;
+	public static volatile ListAttribute<Usuario, UsuarioRol> usrListUsuarioRol;
+}

@@ -1,0 +1,22 @@
+package ec.edu.uce.doctorado.jpa.entidad;
+
+import java.sql.Timestamp;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2021-02-28T16:01:35.695-0500")
+@StaticMetamodel(UsuarioRol.class)
+public class UsuarioRol_ {
+	public static volatile SingularAttribute<UsuarioRol, Integer> usroId;
+	public static volatile SingularAttribute<UsuarioRol, Date> usroFechaInicio;
+	public static volatile SingularAttribute<UsuarioRol, Date> usroFechaFin;
+	public static volatile SingularAttribute<UsuarioRol, Timestamp> usroFechaRegistro;
+	public static volatile SingularAttribute<UsuarioRol, String> usroUsuarioRegistra;
+	public static volatile SingularAttribute<UsuarioRol, Integer> usroEstado;
+	public static volatile SingularAttribute<UsuarioRol, Integer> usroTipoIngreso;
+	public static volatile SingularAttribute<UsuarioRol, String> usroObservacion;
+	public static volatile SingularAttribute<UsuarioRol, Rol> usroRol;
+	public static volatile SingularAttribute<UsuarioRol, Usuario> usroUsuario;
+}

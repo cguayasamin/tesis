@@ -1,0 +1,178 @@
+package ec.edu.uce.doctoradoJpa.entidad;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
+
+
+/**
+ * The persistent class for the usuario database table.
+ * 
+ */
+@Entity
+@Table(name="usuario")
+@NamedQuery(name="Usuario.findAll", query="SELECT u FROM Usuario u")
+public class Usuario implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="usr_id")
+	private int usrId;
+
+	@Column(name="usr_active_directory")
+	private Integer usrActiveDirectory;
+
+	@Column(name="usr_estado")
+	private Integer usrEstado;
+
+	@Column(name="usr_est_sesion")
+	private Integer usrEstSesion;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="usr_fecha_creacion")
+	private Date usrFechaCreacion;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="usr_fecha_caducidad")
+	private Date usrFechaCaducidad;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="usr_tiempo_sesion")
+	private Timestamp usrTiempoSesion;
+	
+	@Column(name="usr_identificacion")
+	private String usrIdentificacion;
+
+	@Column(name="usr_nick")
+	private String usrNick;
+
+	@Column(name="usr_password")
+	private String usrPassword;
+
+	//bi-directional many-to-one association to Persona
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="prs_id")
+	private Persona usrPersona;
+
+	//bi-directional many-to-one association to UsuarioRol
+	@OneToMany(mappedBy="usroUsuario")
+	private List<UsuarioRol> usrListUsuarioRol;
+
+	public Usuario() {
+	}
+
+	public int getUsrId() {
+		return this.usrId;
+	}
+
+	public void setUsrId(int usrId) {
+		this.usrId = usrId;
+	}
+
+	public Integer getUsrActiveDirectory() {
+		return this.usrActiveDirectory;
+	}
+
+	public void setUsrActiveDirectory(Integer usrActiveDirectory) {
+		this.usrActiveDirectory = usrActiveDirectory;
+	}
+
+	public Integer getUsrEstado() {
+		return this.usrEstado;
+	}
+
+	public void setUsrEstado(Integer usrEstado) {
+		this.usrEstado = usrEstado;
+	}
+
+	public Date getUsrFechaCreacion() {
+		return this.usrFechaCreacion;
+	}
+
+	public void setUsrFechaCreacion(Date usrFechaCreacion) {
+		this.usrFechaCreacion = usrFechaCreacion;
+	}
+	
+	public Integer getUsrEstSesion() {
+		return usrEstSesion;
+	}
+
+	public void setUsrEstSesion(Integer usrEstSesion) {
+		this.usrEstSesion = usrEstSesion;
+	}
+
+	public Date getUsrFechaCaducidad() {
+		return usrFechaCaducidad;
+	}
+
+	public void setUsrFechaCaducidad(Date usrFechaCaducidad) {
+		this.usrFechaCaducidad = usrFechaCaducidad;
+	}
+
+	public Timestamp getUsrTiempoSesion() {
+		return usrTiempoSesion;
+	}
+
+	public void setUsrTiempoSesion(Timestamp usrTiempoSesion) {
+		this.usrTiempoSesion = usrTiempoSesion;
+	}
+
+	public String getUsrIdentificacion() {
+		return this.usrIdentificacion;
+	}
+
+	public void setUsrIdentificacion(String usrIdentificacion) {
+		this.usrIdentificacion = usrIdentificacion;
+	}
+
+	public String getUsrNick() {
+		return this.usrNick;
+	}
+
+	public void setUsrNick(String usrNick) {
+		this.usrNick = usrNick;
+	}
+
+	public String getUsrPassword() {
+		return this.usrPassword;
+	}
+
+	public void setUsrPassword(String usrPassword) {
+		this.usrPassword = usrPassword;
+	}
+
+	public Persona getUsrPersona() {
+		return this.usrPersona;
+	}
+
+	public void setUsrPersona(Persona usrPersona) {
+		this.usrPersona = usrPersona;
+	}
+
+	public List<UsuarioRol> getUsrListUsuarioRol() {
+		return this.usrListUsuarioRol;
+	}
+
+	public void setUsrListUsuarioRol(List<UsuarioRol> usrListUsuarioRol) {
+		this.usrListUsuarioRol = usrListUsuarioRol;
+	}
+
+	public UsuarioRol addUsrListUsuarioRol(UsuarioRol usrListUsuarioRol) {
+		getUsrListUsuarioRol().add(usrListUsuarioRol);
+		usrListUsuarioRol.setUsroUsuario(this);
+
+		return usrListUsuarioRol;
+	}
+
+	public UsuarioRol removeUsrListUsuarioRol(UsuarioRol usrListUsuarioRol) {
+		getUsrListUsuarioRol().remove(usrListUsuarioRol);
+		usrListUsuarioRol.setUsroUsuario(null);
+
+		return usrListUsuarioRol;
+	}
+
+}

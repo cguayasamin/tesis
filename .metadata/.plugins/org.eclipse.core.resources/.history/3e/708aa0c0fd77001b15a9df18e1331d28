@@ -1,0 +1,5 @@
+package ec.edu.uce.doctorado.jsf.springSecurity;
+
+public class ProveedorAutenticacion {
+
+}

@@ -1,0 +1,28 @@
+<ui:composition template="/componentesGenerales/plantillas/pltInicio.xhtml">
+<ui:define name="cuerpo">
+<h:form id="frmInicio" enctype="multipart/form-data" acceptcharset="UTF-8">
+<p style="margin-left: 25px; color: rgb(0,118,189); font-size: 25px !important;
+font-weight: bold; margin-top: 2vw;margin-bottom: 2vw;">Bienvenido al sistema de emisión
+de títulos
+</p>
+<p:panel position="center" style="margin-left: 20px; margin-right: 20px;">
+<!-- ******************** TABLA RESPONSIVA ************************ -->
+<div class="grid condensed">
+<!-- ******************** FILA NUMERO 1 ************************ -->
+<div class="row cells3">
+</div>
+<div class="cell" style="font-size: 18px;">
+ <h:graphicImage value="/img/usuario_positivo.png"/> Si usted ya se ha
+registrado haga clic <a href="login.jsp" style="color: rgb(0, 162, 232); font-size:
+18px;">aquí</a>
+</div>
+<div class="cell" style="font-size: 18px;">
+ <h:graphicImage value="/img/usuario_negativo.png"/> Si usted no se
+encuentra registrado haga clic <h:commandLink value=" aquí" style="color: rgb(0, 162,
+232); font-size: 18px;"/>
+ </div>
+</div>
+</p:panel>
+</h:form>
+</ui:define>
+</ui:composition>

@@ -1,0 +1,26 @@
+package ec.edu.uce.doctorado.jpa.entidad;
+
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value="Dali", date="2021-02-28T16:01:35.514-0500")
+@StaticMetamodel(Persona.class)
+public class Persona_ {
+	public static volatile SingularAttribute<Persona, Integer> prsId;
+	public static volatile SingularAttribute<Persona, String> prsMailPersonal;
+	public static volatile SingularAttribute<Persona, String> prsMailInstitucional;
+	public static volatile SingularAttribute<Persona, Date> prsFechaNacimiento;
+	public static volatile SingularAttribute<Persona, String> prsIdentificacion;
+	public static volatile SingularAttribute<Persona, String> prsIdentificacionSnese;
+	public static volatile SingularAttribute<Persona, String> prsNombres;
+	public static volatile SingularAttribute<Persona, String> prsPrimerApellido;
+	public static volatile SingularAttribute<Persona, String> prsSegundoApellido;
+	public static volatile SingularAttribute<Persona, String> prsTelefono;
+	public static volatile SingularAttribute<Persona, Integer> prsTipoIdentificacion;
+	public static volatile SingularAttribute<Persona, Integer> prsSexo;
+	public static volatile SingularAttribute<Persona, Integer> prsSexoSnese;
+	public static volatile ListAttribute<Persona, Usuario> prsListUsuario;
+}

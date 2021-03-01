@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="ec.edu.uce.doctoradoJpa.entidad.Persona"/>
+<fullyQualifiedTypeName name="ec.edu.ec.doctoradoEjb.entidad.PersonaServicio"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+<fullyQualifiedTypeName name="javax.annotation.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
+<fullyQualifiedTypeName name="ec.edu.ec.doctorado.ejb.entidad.PersonaServicio"/>
+<fullyQualifiedTypeName name="ec.edu.ec.doctorado.ejb.entidad.PersonaServicioImpl"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="ec.edu.uce.doctorado.jpa.entidad.Persona"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+</qualifiedTypeNameHistroy>

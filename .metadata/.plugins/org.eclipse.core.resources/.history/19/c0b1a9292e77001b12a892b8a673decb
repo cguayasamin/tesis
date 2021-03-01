@@ -1,0 +1,120 @@
+package ec.edu.uce.alpallacta.jpa.entidad;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+/**
+ * The persistent class for the rol database table.
+ * 
+ */
+@Entity
+@Table(name = "rol")
+@NamedQuery(name = "Rol.findAll", query = "SELECT r FROM Rol r")
+public class Rol implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "rol_id")
+	private int rolId;
+
+	@Column(name = "rol_descripcion")
+	private String rolDescripcion;
+
+	@Column(name = "rol_estado")
+	private Integer rolEstado;
+
+	// bi-directional many-to-one association to Autorizacion
+	@OneToMany(mappedBy = "autRol")
+	private List<Autorizacion> rolListAutorizacion;
+
+	// bi-directional many-to-one association to UsuarioRol
+	@OneToMany(mappedBy = "usroRol")
+	private List<UsuarioRol> rolListUsuarioRol;
+
+	public Rol() {
+	}
+
+	public Rol(int rolId) {
+		super();
+		this.rolId = rolId;
+	}
+
+	public int getRolId() {
+		return this.rolId;
+	}
+
+	public void setRolId(int rolId) {
+		this.rolId = rolId;
+	}
+
+	public String getRolDescripcion() {
+		return this.rolDescripcion;
+	}
+
+	public void setRolDescripcion(String rolDescripcion) {
+		this.rolDescripcion = rolDescripcion;
+	}
+
+	public Integer getRolEstado() {
+		return this.rolEstado;
+	}
+
+	public void setRolEstado(Integer rolEstado) {
+		this.rolEstado = rolEstado;
+	}
+
+	public List<Autorizacion> getRolListAutorizacion() {
+		return this.rolListAutorizacion;
+	}
+
+	public void setRolListAutorizacion(List<Autorizacion> rolListAutorizacion) {
+		this.rolListAutorizacion = rolListAutorizacion;
+	}
+
+	public Autorizacion addRolListAutorizacion(Autorizacion rolListAutorizacion) {
+		getRolListAutorizacion().add(rolListAutorizacion);
+		rolListAutorizacion.setAutRol(this);
+
+		return rolListAutorizacion;
+	}
+
+	public Autorizacion removeRolListAutorizacion(Autorizacion rolListAutorizacion) {
+		getRolListAutorizacion().remove(rolListAutorizacion);
+		rolListAutorizacion.setAutRol(null);
+
+		return rolListAutorizacion;
+	}
+
+	public List<UsuarioRol> getRolListUsuarioRol() {
+		return this.rolListUsuarioRol;
+	}
+
+	public void setRolListUsuarioRol(List<UsuarioRol> rolListUsuarioRol) {
+		this.rolListUsuarioRol = rolListUsuarioRol;
+	}
+
+	public UsuarioRol addRolListUsuarioRol(UsuarioRol rolListUsuarioRol) {
+		getRolListUsuarioRol().add(rolListUsuarioRol);
+		rolListUsuarioRol.setUsroRol(this);
+
+		return rolListUsuarioRol;
+	}
+
+	public UsuarioRol removeRolListUsuarioRol(UsuarioRol rolListUsuarioRol) {
+		getRolListUsuarioRol().remove(rolListUsuarioRol);
+		rolListUsuarioRol.setUsroRol(null);
+
+		return rolListUsuarioRol;
+	}
+
+}

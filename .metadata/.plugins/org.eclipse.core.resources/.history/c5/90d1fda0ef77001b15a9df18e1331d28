@@ -1,0 +1,149 @@
+package ec.edu.uce.doctorado.jpa.entidad;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+/**
+ * The persistent class for the usuario_rol database table.
+ * 
+ */
+@Entity
+@Table(name = "usuario_rol")
+@NamedQuery(name = "UsuarioRol.findAll", query = "SELECT u FROM UsuarioRol u")
+public class UsuarioRol implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "usro_id")
+	private int usroId;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "usro_fecha_inicio")
+	private Date usroFechaInicio;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "usro_fecha_fin")
+	private Date usroFechaFin;
+
+	@Column(name = "usro_fecha_registro")
+	private Timestamp usroFechaRegistro;
+
+	@Column(name = "usro_usuario_registra")
+	private String usroUsuarioRegistra;
+
+	@Column(name = "usro_estado")
+	private Integer usroEstado;
+
+	@Column(name = "usro_tipo_ingreso")
+	private Integer usroTipoIngreso;
+	
+	@Column(name = "usro_observacion")
+	private String usroObservacion;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "rol_id")
+	private Rol usroRol;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "usr_id")
+	private Usuario usroUsuario;
+
+	public UsuarioRol() {
+	}
+
+	public int getUsroId() {
+		return usroId;
+	}
+
+	public void setUsroId(int usroId) {
+		this.usroId = usroId;
+	}
+
+	public Date getUsroFechaInicio() {
+		return usroFechaInicio;
+	}
+
+	public void setUsroFechaInicio(Date usroFechaInicio) {
+		this.usroFechaInicio = usroFechaInicio;
+	}
+
+	public Date getUsroFechaFin() {
+		return usroFechaFin;
+	}
+
+	public void setUsroFechaFin(Date usroFechaFin) {
+		this.usroFechaFin = usroFechaFin;
+	}
+
+	public Timestamp getUsroFechaRegistro() {
+		return usroFechaRegistro;
+	}
+
+	public void setUsroFechaRegistro(Timestamp usroFechaRegistro) {
+		this.usroFechaRegistro = usroFechaRegistro;
+	}
+
+	public String getUsroUsuarioRegistra() {
+		return usroUsuarioRegistra;
+	}
+
+	public void setUsroUsuarioRegistra(String usroUsuarioRegistra) {
+		this.usroUsuarioRegistra = usroUsuarioRegistra;
+	}
+
+	public Integer getUsroEstado() {
+		return usroEstado;
+	}
+
+	public void setUsroEstado(Integer usroEstado) {
+		this.usroEstado = usroEstado;
+	}
+	
+	public Integer getUsroTipoIngreso() {
+		return usroTipoIngreso;
+	}
+
+	public void setUsroTipoIngreso(Integer usroTipoIngreso) {
+		this.usroTipoIngreso = usroTipoIngreso;
+	}
+
+	public String getUsroObservacion() {
+		return usroObservacion;
+	}
+
+	public void setUsroObservacion(String usroObservacion) {
+		this.usroObservacion = usroObservacion;
+	}
+
+	public Rol getUsroRol() {
+		return usroRol;
+	}
+
+	public void setUsroRol(Rol usroRol) {
+		this.usroRol = usroRol;
+	}
+
+	public Usuario getUsroUsuario() {
+		return usroUsuario;
+	}
+
+	public void setUsroUsuario(Usuario usroUsuario) {
+		this.usroUsuario = usroUsuario;
+	}
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" id="Application_ID" version="7">
+  <display-name>doctoradoEar</display-name>
+  <module>
+    <web>
+      <web-uri>doctoradoJsf.war</web-uri>
+      <context-root>aplicacion</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>doctoradoEjb.jar</ejb>
+  </module>
+  <module>
+    <java>hibernate-core-4.3.11.Final.jar</java>
+  </module>
+  <module>
+    <java>hibernate-commons-annotations-4.0.5.Final.jar</java>
+  </module>
+  <module>
+    <java>javassist-3.18.1-GA.jar</java>
+  </module>
+  <module>
+    <java>jandex-1.1.0.Final.jar</java>
+  </module>
+</application>
