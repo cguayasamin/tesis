@@ -48,8 +48,8 @@ public class Persona implements Serializable {
 	@Column(name = "prs_identificacion")
 	private String prsIdentificacion;
 	
-	@Column(name = "prs_tipo_identificacion_snese")
-	private String prsIdentificacionSnese;
+	@Column(name = "PRS_TIPO_IDENTIFICACION_SNIESE")
+	private Integer prsIdentificacionSnese;
 
 	@Column(name = "prs_nombres")
 	private String prsNombres;
@@ -69,7 +69,7 @@ public class Persona implements Serializable {
 	@Column(name = "prs_sexo")
 	private Integer prsSexo;
 
-	@Column(name = "prs_sexo_snese")
+	@Column(name = "PRS_SEXO_SNIESE")
 	private Integer prsSexoSnese;
 
 
@@ -177,11 +177,11 @@ public class Persona implements Serializable {
 		this.prsMailInstitucional = prsMailInstitucional;
 	}
 
-	public String getPrsIdentificacionSnese() {
+	public Integer getPrsIdentificacionSnese() {
 		return prsIdentificacionSnese;
 	}
 
-	public void setPrsIdentificacionSnese(String prsIdentificacionSnese) {
+	public void setPrsIdentificacionSnese(Integer prsIdentificacionSnese) {
 		this.prsIdentificacionSnese = prsIdentificacionSnese;
 	}
 

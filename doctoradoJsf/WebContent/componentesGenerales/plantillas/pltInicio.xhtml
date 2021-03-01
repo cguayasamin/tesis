@@ -1,23 +1,28 @@
-<h:head xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:p="http://java.sun.com/jsf/html"
-        xmlns:h="http://xmlns.jcp.org/jsf/html">
- <ui:include src="/componentesGenerales/plantillas/pltHead.xhtml" />
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+      
+<h:head>
+  <ui:include src="/componentesGenerales/plantillas/pltHead.xhtml" />
 </h:head>
-<h:body class="dtic">
- <div id="cabecera" >
-<ui:include src="/componentesGenerales/plantillas/pltCabecera.xhtml" />
- </div>
- <div id="wrapper" class="wrapper">
-<div id="mensajeGlobal">
- <p:messages autoUpdate="true" globalOnly="true" />
-</div>
-<div id="contenido">
-<ui:include
-src="/componentesGenerales/plantillas/dialogos/dialogoTrabajando.xhtml" />
-<ui:insert name="cuerpo"></ui:insert>
-</div>
- </div>
- <div id="pie">
-<ui:include src="/componentesGenerales/plantillas/pltPie.xhtml" />
- </div>
-</h:body>
+	<h:body class="dtic">
+		<div id="cabecera" style="height: auto;">
+			<ui:include src="/componentesGenerales/plantillas/pltCabecera.xhtml" />
+		</div>
+		<div id="wrapper" class="wrapper">
+			<div id="mensajeGlobal">
+					<p:messages autoUpdate="true" globalOnly="true" />
+			</div>
+			<div id="contenido">
+				<ui:include src="/componentesGenerales/plantillas/dialogos/dialogoTrabajando.xhtml" />
+				<ui:insert name="cuerpo"></ui:insert>
+			</div>
+		</div>
+		<div id="pie" class="pie">
+				<ui:include src="/componentesGenerales/plantillas/pltPie.xhtml" />
+		</div>
+	</h:body> 
+</html>

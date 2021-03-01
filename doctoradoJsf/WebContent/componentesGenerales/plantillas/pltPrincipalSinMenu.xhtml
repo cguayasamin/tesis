@@ -9,25 +9,31 @@
 <h:head>
 	<ui:include src="/componentesGenerales/plantillas/pltHead.xhtml" />
 </h:head>
-<h:body class="dtic" >
+
+<h:body class="dtic" onload="nobackbutton(); verificarErrores();">
+
 		<div id="cabecera" style="height: auto;">
 			<ui:include src="/componentesGenerales/plantillas/pltCabecera.xhtml" />
 		</div>
 		
 		<div id="wrapper"  class="wrapper" >
-			<div id="menu">
-				<ui:include src="/componentesGenerales/plantillas/pltMenu.xhtml" />
+			<div id="barraSuperior">
+				<ui:insert name="paginacion"></ui:insert>
 			</div>
 			<div id="mensajeGlobal">
-				<p:messages autoUpdate="true" globalOnly="true" />
+				<p:messages id="messages" showDetail="true" closable="true">
+		        	<p:autoUpdate />
+		    	</p:messages>
 			</div>
 			<div id="contenido">
 				<ui:include src="/componentesGenerales/plantillas/dialogos/dialogoTrabajando.xhtml" />
 				<ui:insert name="cuerpo"></ui:insert>
 			</div>
 		</div>
+		
 		<div id="pie" class="pie">
-				<ui:include src="/componentesGenerales/plantillas/pltPie.xhtml" />
+			<ui:include src="/componentesGenerales/plantillas/pltPie.xhtml" />
 		</div>
+		
 </h:body>
 </html>

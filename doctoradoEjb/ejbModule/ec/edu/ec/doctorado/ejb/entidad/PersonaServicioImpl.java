@@ -10,7 +10,7 @@ import ec.edu.uce.doctorado.jpa.entidad.Persona;
 
 public class PersonaServicioImpl implements PersonaServicio{
 
-	private EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("doctoradoJpa");
+	private EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("doctoradosJPA");
 	private EntityManager entityManager= entityManagerFactory.createEntityManager();
 	
 	@Override

@@ -1,13 +1,21 @@
-<h:body xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:p="http://primefaces.org/ui"
-        xmlns:f="http://xmlns.jcp.org/jsf/core">
- <h:form>
- <p:menubar>
- <p:submenu>
-</p:submenu>
-<f:facet name="options">
-<a href="#{request.contextPath}/j_spring_security_logout">Salir del Sistema</a>
-</f:facet>
- </p:menubar>
- </h:form>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:body>
+	<h:form>
+		<p:menubar>
+			<p:submenu label="Administración">
+				
+			</p:submenu>
+			
+			<f:facet name="options">
+				<a href="#{request.contextPath}/j_spring_security_logout">Salir	del sistema</a>
+			</f:facet>
+			
+		</p:menubar>
+	</h:form>
 </h:body>
+</html>
