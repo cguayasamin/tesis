@@ -165,56 +165,38 @@
   <path value="C:/wildfly-10.1.0.Final/modules/system/layers/base/org/picketbox/main/picketbox-commons-1.0.0.final.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification">
+   <linked-resource declaration="true" name="%1;%2;" path="%0"/>
+  </core>
   <el>
-   <linked-el length="32" name="%0" offset="333" path="%1"/>
-   <linked-el length="49" name="%2" offset="229" path="%3"/>
-   <linked-el length="59" name="%2" offset="335" path="%4"/>
-   <linked-el length="32" name="%5" offset="333" path="%1"/>
-   <linked-el length="30" name="%6" offset="776" path="%1"/>
-   <linked-el length="23" name="%6" offset="641" path="%1"/>
-   <linked-el length="18" name="%6" offset="514" path="%1"/>
-   <linked-el length="31" name="%6" offset="918" path="%1"/>
-   <linked-el length="23" name="%7" offset="641" path="%1"/>
-   <linked-el length="35" name="%8" offset="959" path="%9"/>
-   <linked-el length="31" name="%10" offset="918" path="%1"/>
-   <linked-el length="49" name="%11" offset="229" path="%3"/>
-   <linked-el length="35" name="%12" offset="959" path="%9"/>
-   <linked-el length="18" name="%13" offset="514" path="%1"/>
-   <linked-el length="30" name="%14" offset="776" path="%1"/>
+   <linked-el length="13" name="%3" offset="772" path="%4"/>
+   <linked-el length="53" name="%5" offset="780" path="%6"/>
+   <linked-el length="49" name="%5" offset="372" path="%7"/>
+   <linked-el length="59" name="%5" offset="681" path="%6"/>
+   <linked-el length="49" name="%8" offset="372" path="%7"/>
   </el>
  </validation>
  <aliases>
-  <alias path="request" value="%2"/>
-  <alias path="personaControlador" value="%5"/>
+  <alias path="org.springframework.web.jsf.el.SpringBeanFacesELResolver" value="%1"/>
+  <alias path="pagina" value="%3"/>
+  <alias path="request" value="%5"/>
   <alias
-   path="/doctoradoJsf/WebContent/componentesGenerales/plantillas/pltHead.xhtml" value="%4"/>
-  <alias path="persona" value="%6"/>
-  <alias path="/doctoradoJsf/WebContent/index.xhtml" value="%1"/>
-  <alias path="persona.prsNombres" value="%7"/>
-  <alias path="proveedorAutenticacion" value="%8"/>
-  <alias path="/doctoradoJsf/WebContent/errorLogin.xhtml" value="%9"/>
-  <alias path="proveedorAutenticacion.mensaje" value="%12"/>
-  <alias path="persona.prsId" value="%13"/>
-  <alias path="personaControlador.listarT" value="%0"/>
+   path="/doctoradoJsf/WebContent/componentesGenerales/plantillas/pltHead.xhtml" value="%6"/>
   <alias
-   path="/doctoradoJsf/WebContent/componentesGenerales/plantillas/pltMenu.xhtml" value="%3"/>
-  <alias path="persona.prsSegundoApellido" value="%10"/>
-  <alias path="request.contextPath" value="%11"/>
-  <alias path="persona.prsPrimerApellido" value="%14"/>
+   path="/doctoradoJsf/WebContent/componentesGenerales/plantillas/pltMenu.xhtml" value="%7"/>
+  <alias
+   path="\doctoradoEar\librerias\springSecurity\spring-web-4.1.4.RELEASE.jar" value="%2"/>
+  <alias path="request.contextPath" value="%8"/>
+  <alias
+   path="/doctoradoJsf/WebContent/componentesGenerales/plantillas/pltPaginacion.xhtml" value="%4"/>
+  <alias path="/doctoradoJsf/WebContent/WEB-INF/faces-config.xml" value="%0"/>
  </aliases>
  <includes/>
  <uris>
-  <uri value="http://xmlns.jcp.org/jsf/core">
-   <prefix>f</prefix>
-  </uri>
-  <uri value="http://xmlns.jcp.org/jsf/html">
-   <prefix>h</prefix>
-  </uri>
   <uri value="http://java.sun.com/jsf/core">
    <prefix>f</prefix>
   </uri>
   <uri value="http://java.sun.com/jsf/html">
-   <prefix>p</prefix>
    <prefix>h</prefix>
   </uri>
   <uri value="http://primefaces.org/ui">

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.hibernate.eclipse.launch.ConsoleConfigurationLaunchConfigurationType">
-<stringAttribute key="org.hibernate.eclipse.launch.CONFIGURATION_FACTORY" value="CORE"/>
-<stringAttribute key="org.hibernate.eclipse.launch.CONNECTION_PROFILE_NAME" value="DoctoradoBD"/>
-<listAttribute key="org.hibernate.eclipse.launch.FILE_MAPPINGS"/>
-<stringAttribute key="org.hibernate.eclipse.launch.HIBERNATE_VERSION" value="5.3"/>
-</launchConfiguration>

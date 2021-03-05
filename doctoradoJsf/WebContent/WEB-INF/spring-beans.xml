@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
  http://www.springframework.org/schema/jee
 http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
@@ -11,32 +11,33 @@ http://www.springframework.org/schema/security/spring-security-4.0.xsd
 http://www.springframework.org/schema/context/spring-context-4.1.xsd
  http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop-4.1.xsd"
-xmlns:jee="http://www.springframework.org/schema/jee"
-xmlns:security="http://www.springframework.org/schema/security"
- xmlns:context="http://www.springframework.org/schema/context"
-xmlns:aop="http://www.springframework.org/schema/aop">
- <!-- === DEFINE LA CLASE QUE MANEJA LA ESTRATEGIA SEGUIR CUANDO SE INGRESA AUN URL
-SIN AUTENTICACION == -->
-<bean id="estrategiaSesionInvalida"
-class="ec.edu.uce.emisionTitulo.jsf.springSecurity.EstrategiaSesionInvalida">
-<property name="invalidSessionUrl" value="/index.html" />
-</bean>
- <!-- === FILTRO PARA DETECTAR QUE EL USUARIO QUE HAGA LA PETICION ESTE AUTENTICADO
-== -->
-<bean id="sessionManagementFilter"
-class="org.springframework.security.web.session.SessionManagementFilter">
-<constructor-arg name="securityContextRepository"
-ref="httpSessionSecurityContextRepository" />
-<property name="invalidSessionStrategy" ref="estrategiaSesionInvalida" />
-</bean>
-<!-- === ALMACENA EL CONTEXTO DE SEGURIDAD EN EL HTTPSESSION ENTER SOLICITUDES ==
--->
-<bean id="httpSessionSecurityContextRepository"
-class="org.springframework.security.web.context.HttpSessionSecurityContextRepository"/>
-<!-- === DEFINE LA CLASE PROVEEDORA DE LA AUTENTICACION == -->
-<bean id="proveedorAutenticacion"
-class="ec.edu.uce.emisionTitulo.jsf.springSecurity.ProveedorAutenticacion">
- <property name="srvUsuarioEjb" ref="servicioUsuarioEjb"/>
- <property name="srvUsuarioRolEjb" ref="servicioUsuarioRolEjb"/>
- </bean>
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop">
+	<!-- === DEFINE LA CLASE QUE MANEJA LA ESTRATEGIA SEGUIR CUANDO SE INGRESA 
+		AUN URL SIN AUTENTICACION == -->
+	<bean id="estrategiaSesionInvalida"
+		class="ec.edu.uce.doctorado.jsf.springSecurity.EstrategiaSesionInvalida">
+		<property name="invalidSessionUrl" value="/index.html" />
+	</bean>
+	<!-- === FILTRO PARA DETECTAR QUE EL USUARIO QUE HAGA LA PETICION ESTE AUTENTICADO 
+		== -->
+	<bean id="sessionManagementFilter"
+		class="org.springframework.security.web.session.SessionManagementFilter">
+		<constructor-arg name="securityContextRepository"
+			ref="httpSessionSecurityContextRepository" />
+		<property name="invalidSessionStrategy"
+			ref="estrategiaSesionInvalida" />
+	</bean>
+	<!-- === ALMACENA EL CONTEXTO DE SEGURIDAD EN EL HTTPSESSION ENTER SOLICITUDES 
+		== -->
+	<bean id="httpSessionSecurityContextRepository"
+		class="org.springframework.security.web.context.HttpSessionSecurityContextRepository" />
+	<!-- === DEFINE LA CLASE PROVEEDORA DE LA AUTENTICACION == --> 
+	<bean id="proveedorAutenticacion"
+		class="ec.edu.uce.doctorado.jsf.springSecurity.ProveedorAutenticacion">
+		<property name="srvUsuarioEjb" ref="servicioUsuarioEjb" />
+		<property name="srvUsuarioRolEjb" ref="servicioUsuarioRolEjb" />
+	</bean>
 </beans>

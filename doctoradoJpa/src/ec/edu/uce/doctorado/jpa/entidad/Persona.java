@@ -48,7 +48,7 @@ public class Persona implements Serializable {
 	@Column(name = "prs_identificacion")
 	private String prsIdentificacion;
 	
-	@Column(name = "PRS_TIPO_IDENTIFICACION_SNIESE")
+	@Column(name = "PRS_TIPO_IDENTIFICACION_SNESE")
 	private Integer prsIdentificacionSnese;
 
 	@Column(name = "prs_nombres")
@@ -69,7 +69,7 @@ public class Persona implements Serializable {
 	@Column(name = "prs_sexo")
 	private Integer prsSexo;
 
-	@Column(name = "PRS_SEXO_SNIESE")
+	@Column(name = "PRS_SEXO_SNESE")
 	private Integer prsSexoSnese;
 
 

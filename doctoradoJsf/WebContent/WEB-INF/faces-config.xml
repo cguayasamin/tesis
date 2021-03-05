@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+<faces-config version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-<!--
-========================================================================================
-=======
-======================================== MANEJADOR DE LENGUAJE
-=================================
-========================================================================================
-======= -->
-<application>
- <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
- <locale-config>
- <default-locale>es</default-locale>
- <supported-locale>bg</supported-locale>
- <supported-locale>de</supported-locale>
- <supported-locale>en</supported-locale>
- <supported-locale>fr</supported-locale>
- <supported-locale>tr</supported-locale>
- </locale-config>
-</application>
+	<!-- ======================================================================================== 
+		======= ======================================== MANEJADOR DE LENGUAJE ================================= 
+		======================================================================================== 
+		======= -->
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+		<locale-config>
+			<default-locale>es</default-locale>
+			<supported-locale>bg</supported-locale>
+			<supported-locale>de</supported-locale>
+			<supported-locale>en</supported-locale>
+			<supported-locale>fr</supported-locale>
+			<supported-locale>tr</supported-locale>
+		</locale-config>
+	</application>
 
-<!--
-========================================================================================
-======= =============================== NAVEGACION DESDE EL CUALQUIER PAGINA (*)
-=======================
-========================================================================================
-======= -->
-<navigation-rule>
- <from-view-id>*</from-view-id>
- <navigation-case>
- <from-outcome>logout</from-outcome>
- <to-view-id>/j_spring_security_logout</to-view-id>
- </navigation-case>
-</navigation-rule>
+	<!-- ======================================================================================== 
+		======= =============================== NAVEGACION DESDE EL CUALQUIER PAGINA 
+		(*) ======================= ======================================================================================== 
+		======= -->
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>logout</from-outcome>
+			<to-view-id>/j_spring_security_logout</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 </faces-config>

@@ -30,11 +30,11 @@ http://www.springframework.org/schema/aop/spring-aop-4.1.xsd"
 		<security:logout invalidate-session="true" />
 		<security:custom-filter
 			ref="sessionManagementFilter" before="SESSION_MANAGEMENT_FILTER" />
-		<!-- <security:form-login
+		<security:form-login
 			login-page="/doctorado/generalidades/login.jsp"
 			default-target-url="/doctorado/generalidades/principal.xhtml"
-			always-use-defaulttarget="true"
-			authentication-failure-url="/errorLogin.xhtml" /> -->
+			always-use-default-target="true"
+			authentication-failure-url="/errorLogin.xhtml" /> 
 	</security:http>
 
 	<!-- DEFINE EL AUTENTICATION MANAGER A PARTIR DEL BEAN PROVEEDOR DE LA AUTENTICACION -->
